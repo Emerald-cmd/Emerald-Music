@@ -1,6 +1,7 @@
 module.exports = {
         px: '.',
         playing: 'Use .help for a list of commands!',
+        color: "",
 
     opt: {
         DJ: {
