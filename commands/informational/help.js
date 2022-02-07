@@ -7,18 +7,18 @@ module.exports = {
     utilisation: '{prefix}helpline',
     execute(client, message, args, Discord){
         const first = new MessageEmbed()
-        .setTitle('Need Help?')
-        .setColor('GREEN')
-        .addField('Prefix: `.`')
-        .addField('Who made me?', 'emerald')
-        .addField('Commands', 'Page 2 : Normal Commands', 'Page 3 : Music Commands')
+		embed.setTitle("Ping 🏓")
+		embed.setDescription(`Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
+		embed.setColor("#00D166")
+        embed.setTimestamp();
+        embed.setFooter('Emerald Bot - by emerald#0652', message.author.avatarURL({ dynamic: true }));
 
         const second = new MessageEmbed()
-        .setTitle('Commands')
-        .setColor('GREEN')
-        .addField('Prefix: `.`')
-        .addField('.help')
-        .addField('a')
+		embed.setTitle("Ping 🏓")
+		embed.setDescription(`Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
+		embed.setColor("#00D166")
+        embed.setTimestamp();
+        embed.setFooter('Emerald Bot - by emerald#0652', message.author.avatarURL({ dynamic: true }));
 
         const pages = [first, second];
         ReactionPages(message, pages, false)
