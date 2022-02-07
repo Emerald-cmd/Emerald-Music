@@ -7,16 +7,15 @@ module.exports = {
     utilisation: '{prefix}helpline',
     execute(client, message, args, Discord){
         const first = new MessageEmbed()
-		.setTitle("Ping 🏓")
-		.setDescription(`Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
-		.setColor("#00D166")
-        .setTimestamp();
+        .setTitle('Need Help?')
+        .setColor('GREEN')
+        .addField('Prefix:')
 
         const second = new MessageEmbed()
-		.setTitle("Ping 🏓")
-		.setDescription(`Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
-		.setColor("#00D166")
-        .setTimestamp();
+        .setTitle('Commands')
+        .setColor('GREEN')
+        .addField('Prefix:')
+
 
         const pages = [first, second];
         ReactionPages(message, pages, false)
