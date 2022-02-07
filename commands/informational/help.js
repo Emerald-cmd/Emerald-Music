@@ -12,6 +12,7 @@ module.exports = {
 		embed.setColor("#00D166")
         embed.setTimestamp();
         embed.setFooter('Emerald Bot - by emerald#0652', message.author.avatarURL({ dynamic: true }));
+        message.channel.send({ embeds: [embed] });
 
         const second = new MessageEmbed()
 		embed.setTitle("Ping 🏓")
@@ -19,6 +20,7 @@ module.exports = {
 		embed.setColor("#00D166")
         embed.setTimestamp();
         embed.setFooter('Emerald Bot - by emerald#0652', message.author.avatarURL({ dynamic: true }));
+        message.channel.send({ embeds: [embed] });
 
         const pages = [first, second];
         ReactionPages(message, pages, false)
