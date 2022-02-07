@@ -11,13 +11,13 @@ module.exports = {
         embed.setColor('#0099ff')
         embed.setTitle('List of Commands 📃')
         embed.setDescription('Listed are commands any players can use!')
-        embed.setThumbnail('https://i.imgur.com/AfFp7pu.png')
+        embed.setThumbnail('https://i.imgur.com/zp4TMm7.png')
         embed.addFields(
-            { name: '.help', value: 'Pulls this list of commands up', inline: true },
-            { name: '.help-music', value: 'Pulls up help list for Music', inline: true },
-            { name: '.ping', value: 'Shows the ping of the bot', inline: true },
-            { name: 'server', value: 'Shows the server stats', inline: true },
-            { name: '.user', value: 'Shows your user info', inline: true },
+            { name: '.help', value: 'Pulls this list of commands up *(h)*', inline: true },
+            { name: '.help-music', value: 'Pulls up help list for Music *(hm, music)*', inline: true },
+            { name: '.ping', value: 'Shows the ping of the bot *(latency)*', inline: true },
+            { name: 'server', value: 'Shows the server stats *(server-info)*', inline: true },
+            { name: '.user', value: 'Shows your user info *(user-info)*', inline: true },
             { name: '.helpline', value: 'Messages you a list of help phone hotlines', inline: true },
         )
         embed.setTimestamp()
