@@ -11,7 +11,7 @@ module.exports = {
         embed.setColor('#0099ff')
         embed.setTitle('List of Commands 📃')
         embed.setDescription('Listed are commands any players can use!')
-        embed.setThumbnail('https://i.imgur.com/zp4TMm7.png')
+        embed.setThumbnail('https://i.imgur.com/aJX9Y95.png')
         embed.addFields(
             { name: '.help', value: 'Pulls this list of commands up *(h)*', inline: true },
             { name: '.help-music', value: 'Pulls up help list for Music *(hm, music)*', inline: true },
