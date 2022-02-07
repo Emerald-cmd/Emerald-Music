@@ -13,15 +13,15 @@ module.exports = {
         embed.setDescription('Listed are commands any players can use!')
         embed.setThumbnail('https://i.imgur.com/AfFp7pu.png')
         embed.addFields(
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
+            { name: '.help', value: 'Pulls this list of commands up', inline: true },
+            { name: '.help-music', value: 'Pulls up help list for Music', inline: true },
+            { name: '.ping', value: 'Shows the ping of the bot', inline: true },
+            { name: 'server', value: 'Shows the server stats', inline: true },
+            { name: '.user', value: 'Shows your user info', inline: true },
+            { name: '.helpline', value: 'Messages you a list of help phone hotlines', inline: true },
         )
         embed.setTimestamp()
-        embed.setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+        embed.setFooter({ text: 'Emerald Bot - by emerald#0652', iconURL: 'https://i.imgur.com/oAl3oc9.png' });
         message.channel.send({ embeds: [embed] });
     },
 };
