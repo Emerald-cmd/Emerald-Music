@@ -7,25 +7,58 @@ module.exports = {
     utilisation: '{prefix}help',
     execute(client, message, args, Discord){
         const first = new MessageEmbed()
-        .setTitle('title')
-        .setColor('RANDOM')
-        .addField('line 1')
-        .addField('line 2')
-        .addField('title', 'description', true)
+        .setColor('#0099ff')
+        .setTitle('Some title')
+        .setURL('https://discord.js.org/')
+        .setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
+        .setDescription('Some description here')
+        .setThumbnail('https://i.imgur.com/AfFp7pu.png')
+        .addFields(
+            { name: 'Regular field title', value: 'Some value here' },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+        )
+        .addField('Inline field title', 'Some value here', true)
+        .setImage('https://i.imgur.com/AfFp7pu.png')
+        .setTimestamp()
+        .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
         const second = new MessageEmbed()
-        .setTitle('title')
-        .setColor('RANDOM')
-        .addField('line1')
-        .addField('line2')
-        .addField('title', 'description', true)
-
+        .setColor('#0099ff')
+        .setTitle('Some title')
+        .setURL('https://discord.js.org/')
+        .setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
+        .setDescription('Some description here')
+        .setThumbnail('https://i.imgur.com/AfFp7pu.png')
+        .addFields(
+            { name: 'Regular field title', value: 'Some value here' },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+        )
+        .addField('Inline field title', 'Some value here', true)
+        .setImage('https://i.imgur.com/AfFp7pu.png')
+        .setTimestamp()
+        .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+        
         const third = new MessageEmbed()
-        .setTitle('title')
-        .setColor('RANDOM')
-        .addField('line1')
-        .addField('line2')
-        .addField('title', 'description', true)
+        .setColor('#0099ff')
+        .setTitle('Some title')
+        .setURL('https://discord.js.org/')
+        .setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
+        .setDescription('Some description here')
+        .setThumbnail('https://i.imgur.com/AfFp7pu.png')
+        .addFields(
+            { name: 'Regular field title', value: 'Some value here' },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+        )
+        .addField('Inline field title', 'Some value here', true)
+        .setImage('https://i.imgur.com/AfFp7pu.png')
+        .setTimestamp()
+        .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
 
         const pages = [first, second, third];
