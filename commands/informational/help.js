@@ -11,21 +11,21 @@ module.exports = {
         .setColor('RANDOM')
         .addField('line 1')
         .addField('line 2')
-        .addField('line 3')
+        .addField('title', 'description', true)
 
         const second = new MessageEmbed()
         .setTitle('title')
         .setColor('RANDOM')
         .addField('line1')
         .addField('line2')
-        .addField('line 3')
+        .addField('title', 'description', true)
 
         const third = new MessageEmbed()
         .setTitle('title')
         .setColor('RANDOM')
         .addField('line1')
         .addField('line2')
-        .addField('line 3')
+        .addField('title', 'description', true)
 
 
         const pages = [first, second, third];
