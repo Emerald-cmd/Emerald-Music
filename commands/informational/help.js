@@ -3,7 +3,8 @@ const { ReactionPages } = require('reconlx')
 
 module.exports = {
     name: 'help',
-    description: 'this is a help command',
+    aliases: [],
+    utilisation: '{prefix}help',
     execute(client, message, args, Discord){
         const first = new MessageEmbed()
         .setTitle('title')
