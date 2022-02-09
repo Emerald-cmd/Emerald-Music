@@ -63,7 +63,7 @@ player.on('channelEmpty', (queue) => {
 player.on('queueEnd', (queue) => {
     queue.metadata.send('All play queue finished, I think you can listen to some more music. ✅');
 });
-bot.on("guildCreate", guild => {
+client.on("guildCreate", guild => {
   
     let defaultChannel = "";
     guild.channels.cache.forEach((channel) => {
