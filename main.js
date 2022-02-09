@@ -65,7 +65,7 @@ player.on('queueEnd', (queue) => {
 });
 client.on('guildCreate', guild => {
 
-    guild.systemChannel.send('HELLO')
+    guild.systemChannel.send('Hi! I am **Emerald Bot**\nMy Prefix is `.`\nUse `.help` for a list of commands!')
     
     });
 if(process.env.token){
