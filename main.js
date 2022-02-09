@@ -63,18 +63,11 @@ player.on('channelEmpty', (queue) => {
 player.on('queueEnd', (queue) => {
     queue.metadata.send('All play queue finished, I think you can listen to some more music. ✅');
 });
-client.on("guildCreate", guild => {
-  
-    let defaultChannel = "";
-    guild.channels.cache.forEach((channel) => {
-      if(channel.type == "text" && defaultChannel == "") {
-        if(channel.permissionsFor(guild.me).has("SEND_MESSAGES")) {
-          defaultChannel = channel;
-        }
-      }
-    })
-    defaultChannel.send('Hello, Im a Bot!')
-});
+client.on('guildCreate', guild => {
+
+    guild.systemChannel.send('HELLO')
+    
+    });
 if(process.env.token){
 client.login(process.env.token).catch(e => {
 console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
