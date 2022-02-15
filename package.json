@@ -14,7 +14,8 @@
     "mongoose": "^6.2.0",
     "ms": "^3.0.0-canary.1",
     "opusscript": "^0.0.8",
-    "reconlx": "^2.5.2"
+    "reconlx": "^2.5.2",
+    "ytdl-core": "^4.10.1"
   },
   "engines": {
     "node": "16.x"
