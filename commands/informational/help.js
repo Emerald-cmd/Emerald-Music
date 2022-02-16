@@ -22,7 +22,6 @@ module.exports = {
         )
         embed.setTimestamp()
         embed.setFooter({ text: 'Emerald Bot - by emerald#0652', iconURL: 'https://i.imgur.com/oAl3oc9.png' });
-        message.channel.send({ embeds: [embed] });
     const saveButton = new MessageButton();
 
     saveButton.setLabel('Save Song');
@@ -30,5 +29,6 @@ module.exports = {
     saveButton.setStyle('SUCCESS');
 
     const row = new MessageActionRow().addComponents(saveButton);
+    message.channel.send({ embeds: [embed], components: [row] });
     },
 };
