@@ -8,7 +8,7 @@ module.exports = {
     execute(client, message, args) {
         const embed = new MessageEmbed();
 		embed.setTitle("Ping 🏓")
-		embed.setDescription(`Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
+		embed.setDescription(`<:arrow:943421375501181030> Latency is **${Date.now() - message.createdTimestamp}**ms\n\nAPI Latency is **${Math.round(client.ws.ping)}**ms`)
 		embed.setColor("#00D166")
         embed.setTimestamp();
         embed.setFooter('Emerald Bot - by emerald#0652', message.author.avatarURL({ dynamic: true }));
