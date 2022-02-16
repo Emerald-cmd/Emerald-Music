@@ -24,8 +24,8 @@ module.exports = {
         embed.setFooter({ text: 'Emerald Bot - by emerald#0652', iconURL: 'https://i.imgur.com/oAl3oc9.png' });
     const saveButton = new MessageButton();
 
-    saveButton.setLabel('Save Song');
-    saveButton.setCustomId('saveTrack');
+    saveButton.setLabel('Next Page <:arrow:943421375501181030>');
+    saveButton.setCustomEd('nextPage');
     saveButton.setStyle('SUCCESS');
 
     const row = new MessageActionRow().addComponents(saveButton);

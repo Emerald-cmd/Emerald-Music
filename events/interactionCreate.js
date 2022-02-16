@@ -11,6 +11,7 @@ module.exports = (client, int) => {
                 return int.reply({ content: `I sent you the name of the music in a private message ✅`, ephemeral: true, components: [] });
             }).catch(error => {
                 return int.reply({ content: `I can't send you a private message. <:warning:943421375526355024>`, ephemeral: true, components: [] });
+    
             });
         }
     }
