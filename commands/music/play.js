@@ -7,14 +7,14 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-if (!args[0]) return message.channel.send(`${message.author}, Write the name of the music you want to search. ❌`);
+if (!args[0]) return message.channel.send(`${message.author}, Write the name of the music you want to search. <:warning:943421375526355024>`);
 
         const res = await client.player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No results found! ❌`);
+        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No results found! <:warning:943421375526355024>`);
 
         const queue = await client.player.createQueue(message.guild, {
             metadata: message.channel
@@ -24,7 +24,7 @@ if (!args[0]) return message.channel.send(`${message.author}, Write the name of 
             if (!queue.connection) await queue.connect(message.member.voice.channel);
         } catch {
             await client.player.deleteQueue(message.guild.id);
-            return message.channel.send(`${message.author}, I can't join audio channel. ❌`);
+            return message.channel.send(`${message.author}, I can't join audio channel. <:warning:943421375526355024>`);
         }
 
         await message.channel.send(`Your ${res.playlist ? 'Your Playlist' : 'Your Track'} Loading... 🎧`);

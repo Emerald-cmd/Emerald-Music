@@ -10,9 +10,9 @@ module.exports = {
         const queue = client.player.getQueue(message.guild.id);
 
  
-        if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+        if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. <:warning:943421375526355024>`);
 
-        if (!queue.tracks[0]) return message.channel.send(`${message.author}, No music in queue after current. ❌`);
+        if (!queue.tracks[0]) return message.channel.send(`${message.author}, No music in queue after current. <:warning:943421375526355024>`);
 
         const embed = new MessageEmbed();
         const methods = ['🔁', '🔂'];

@@ -53,11 +53,11 @@ player.on('trackAdd', (queue, track) => {
 });
 
 player.on('botDisconnect', (queue) => {
-    queue.metadata.send('Someone from the audio channel Im connected to kicked me out, the whole playlist has been cleared! ❌');
+    queue.metadata.send('Someone from the audio channel Im connected to kicked me out, the whole playlist has been cleared! <:warning:943421375526355024>');
 });
 
 player.on('channelEmpty', (queue) => {
-    queue.metadata.send('I left the audio channel because there is no one on my audio channel. ❌');
+    queue.metadata.send('I left the audio channel because there is no one on my audio channel. <:warning:943421375526355024>');
 });
 
 player.on('queueEnd', (queue) => {

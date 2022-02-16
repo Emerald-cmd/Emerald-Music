@@ -10,16 +10,16 @@ module.exports = {
         const queue = client.player.getQueue(message.guild.id);
 
  
-if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. <:warning:943421375526355024>`);
 
         if (args.join('').toLowerCase() === 'queue') {
-            if (queue.repeatMode === 1) return message.channel.send(`${message.author}, You should disable loop mode of existing music first **(${client.config.px}loop)** ❌`);
+            if (queue.repeatMode === 1) return message.channel.send(`${message.author}, You should disable loop mode of existing music first **(${client.config.px}loop)** <:warning:943421375526355024>`);
 
             const success = queue.setRepeatMode(queue.repeatMode === 0 ? QueueRepeatMode.QUEUE : QueueRepeatMode.OFF);
 
-            return message.channel.send(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, The whole sequence will repeat non-stop 🔁` : `${message.author}, Something went wrong. ❌`);
+            return message.channel.send(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, The whole sequence will repeat non-stop 🔁` : `${message.author}, Something went wrong. <:warning:943421375526355024>`);
         } else {
-            if (queue.repeatMode === 2) return message.channel.send(`${message.author}, In Loop mode you must disable existing queue first **(${client.config.px}loop queue)** ❌`);
+            if (queue.repeatMode === 2) return message.channel.send(`${message.author}, In Loop mode you must disable existing queue first **(${client.config.px}loop queue)** <:warning:943421375526355024>`);
 
             const success = queue.setRepeatMode(queue.repeatMode === 0 ? QueueRepeatMode.TRACK : QueueRepeatMode.OFF);
 

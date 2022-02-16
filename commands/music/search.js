@@ -9,14 +9,14 @@ module.exports = {
 
     async execute(client, message, args) {
       
-if (!args[0]) return message.channel.send(`${message.author}, Please enter a valid song name. ❌`);
+if (!args[0]) return message.channel.send(`${message.author}, Please enter a valid song name. <:warning:943421375526355024>`);
 
         const res = await client.player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No search results found. ❌`);
+        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No search results found. <:warning:943421375526355024>`);
 
         const queue = await client.player.createQueue(message.guild, {
             metadata: message.channel
@@ -55,7 +55,7 @@ if (!args[0]) return message.channel.send(`${message.author}, Please enter a val
                 if (!queue.connection) await queue.connect(message.member.voice.channel);
             } catch {
                 await client.player.deleteQueue(message.guild.id);
-                return message.channel.send(`${message.author}, I can't join audio channel. ❌`);
+                return message.channel.send(`${message.author}, I can't join audio channel. <:warning:943421375526355024>`);
             }
 
             await message.channel.send(`Loading your music call. 🎧`);
@@ -66,7 +66,7 @@ if (!args[0]) return message.channel.send(`${message.author}, Please enter a val
         });
 
         collector.on('end', (msg, reason) => {
-            if (reason === 'time') return message.channel.send(`${message.author}, Song search time expired ❌`);
+            if (reason === 'time') return message.channel.send(`${message.author}, Song search time expired <:warning:943421375526355024>`);
         });
     },
 };

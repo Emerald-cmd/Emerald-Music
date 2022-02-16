@@ -7,11 +7,11 @@ module.exports = {
     async execute(client, message, args) {
         const queue = client.player.getQueue(message.guild.id);
 
-   if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+   if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. <:warning:943421375526355024>`);
 
         const actualFilter = queue.getFiltersEnabled()[0];
 
-        if (!args[0]) return message.channel.send(`${message.author}, Please enter a valid filter name. ❌\n\`bassboost, 8D, nightcore\``);
+        if (!args[0]) return message.channel.send(`${message.author}, Please enter a valid filter name. <:warning:943421375526355024>\n\`bassboost, 8D, nightcore\``);
 
         const filters = [];
         queue.getFiltersEnabled().map(x => filters.push(x));
@@ -19,7 +19,7 @@ module.exports = {
 
         const filter = filters.find((x) => x.toLowerCase() === args[0].toLowerCase());
 
-        if (!filter) return message.channel.send(`${message.author}, I couldn't find a filter with your name. ❌\n\`bassboost, 8D, nightcore\``);
+        if (!filter) return message.channel.send(`${message.author}, I couldn't find a filter with your name. <:warning:943421375526355024>\n\`bassboost, 8D, nightcore\``);
 
         const filtersUpdated = {};
 
