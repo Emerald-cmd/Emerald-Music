@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'staff-help',
-    aliases: ['hs',"staff",'help-staff'],
+    aliases: ["staff",'help-staff'],
     showHelp: false,
     utilisation: '{prefix}staff-help',
 
