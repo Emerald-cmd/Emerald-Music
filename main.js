@@ -1,8 +1,6 @@
 const { Player } = require('discord-player');
 const { Client, Intents, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
-const path = require("path");
-const slashCommands = require('discord-with-slash');
 
 let client = new Client({
     intents: [
