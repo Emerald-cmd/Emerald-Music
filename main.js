@@ -11,6 +11,7 @@ let client = new Client({
     ],
     disableMentions: 'everyone',
 });
+
 client.config = require('./config');
 client.player = new Player(client, client.config.opt.discordPlayer);
 client.commands = new Collection();
@@ -67,5 +68,10 @@ client.on('guildCreate', guild => {
     guild.systemChannel.send('Hi! I am **Emerald Bot**\nMy Prefix is `.`\nUse `.help` for a list of commands!')
     
     });
-client.login(process.env.token)
-client.login(process.env.TOKEN)
+if(process.env.token){
+client.login(process.env.token).catch(e => {
+console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
+})
+} else {
+console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
+}
