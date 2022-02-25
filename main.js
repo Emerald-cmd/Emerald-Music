@@ -11,7 +11,7 @@ let client = new Client({
     ],
     disableMentions: 'everyone',
 });
-require("discord-buttons")(client);
+
 client.config = require('./config');
 client.player = new Player(client, client.config.opt.discordPlayer);
 client.commands = new Collection();
