@@ -68,6 +68,5 @@ client.on('guildCreate', guild => {
     guild.systemChannel.send('Hi! I am **Emerald Bot**\nMy Prefix is `.`\nUse `.help` for a list of commands!')
     
     });
-emerald = client.login(process.env.token).catch(e => {
-sapphire = client.login(process.env.TOKEN)
-})
+client.login(process.env.token)
+client.login(process.env.TOKEN)
