@@ -7,6 +7,7 @@
     "start": "node main.js"
   },
   "dependencies": {
+    "discord-button": "^1.0.3",
     "discord-buttons": "^4.0.0-deprecated",
     "discord-player": "^5.2.2",
     "discord-with-slash": "^1.0.542",
