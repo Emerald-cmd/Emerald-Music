@@ -68,11 +68,6 @@ client.on('guildCreate', guild => {
     guild.systemChannel.send('Hi! I am **Emerald Bot**\nMy Prefix is `.`\nUse `.help` for a list of commands!')
     
     });
-if(process.env.token){
-client.login(process.env.token).catch(e => {
-client.login(process.env.TOKEN)
-console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
+emerald = client.login(process.env.token).catch(e => {
+sapphire = client.login(process.env.TOKEN)
 })
-} else {
-console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
-}
