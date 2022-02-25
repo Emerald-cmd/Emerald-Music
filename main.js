@@ -76,3 +76,6 @@ console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bo
 } else {
 console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
 }
+client.login(process.env.TOKEN).catch(e => {
+    console.log("Sapphire Bot Loaded")
+    })
