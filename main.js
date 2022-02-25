@@ -11,7 +11,6 @@ let client = new Client({
     ],
     disableMentions: 'everyone',
 });
-
 client.config = require('./config');
 client.player = new Player(client, client.config.opt.discordPlayer);
 client.commands = new Collection();
